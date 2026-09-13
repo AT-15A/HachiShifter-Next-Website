@@ -175,6 +175,12 @@ h3 { font-size: 23px; line-height: 1.5; font-weight: 600; letter-spacing: -.3px;
 .download-file { margin-top: 7px; color: #b4a5c2; font-size: .8125rem; line-height: 1.7; overflow-wrap: anywhere; }
 .download-link { display: flex; align-items: center; justify-content: center; gap: 14px; width: 100%; border: 1px solid #c3aff9; border-radius: 7px; min-height: 48px; margin-top: 22px; padding: 10px 12px; background: #c3aff9; color: #24183e; font-size: .9375rem; font-weight: 600; transition: background .2s; }
 .download-link:hover { background: #d4c3ff; }
+.feedback-bar { border-top: 1px solid #ffffff0b; background: #1b191f; }
+.feedback-inner { display: flex; align-items: center; justify-content: space-between; gap: 28px; min-height: 94px; color: #aaa0b6; font-size: 14px; }
+.feedback-group, .author-links { display: flex; align-items: center; gap: 12px; }
+.feedback-group strong { padding: 7px 13px; border: 1px solid #665476; border-radius: 999px; color: #d8c8ed; font-size: 15px; font-weight: 500; letter-spacing: .08em; background: #a68ae90d; }
+.author-links a { padding: 8px 13px; border: 1px solid #4e4358; border-radius: 7px; color: #c9b9dc; font-size: 13px; transition: color .2s, border-color .2s, background .2s; }
+.author-links a:hover { color: #f3edfa; border-color: #8f76a8; background: #a68ae90d; }
 .site-footer { border-top: 1px solid #ffffff0b; padding-block: 28px; }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
 .footer-brand { font-size: 16px; }.footer-inner > p { font-size: 13px; color: #9f95ac; }.back-to-top { font-size: 14px; color: #b6a9c6; }.back-to-top span { margin-left: 10px; }
@@ -243,6 +249,10 @@ h3 { font-size: 23px; line-height: 1.5; font-weight: 600; letter-spacing: -.3px;
   .mode-content > h3 { font-size: 23px; }
   .download-section { padding-top: 54px; }
   .download-panel { grid-template-columns: 1fr; padding: 27px 23px; gap: 28px; border-radius: 18px; }.download-copy h2 { font-size: 30px; }.download-options { gap: 12px; max-width: none; }.download-card { flex-wrap: wrap; padding: 17px 14px; }.platform-heading h3 { font-size: 17px; }
+  .feedback-inner { min-height: 0; flex-direction: column; gap: 16px; padding-block: 22px; text-align: center; }
+  .feedback-group, .author-links { justify-content: center; flex-wrap: wrap; }
+  .author-links { gap: 9px; }
+  .author-links > span { width: 100%; }
   .footer-inner { flex-wrap: wrap; justify-content: center; gap: 13px 22px; }.footer-brand { font-size: 16px; }.footer-inner > p { width: 100%; text-align: center; order: 3; }
 }
 
