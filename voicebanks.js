@@ -58,11 +58,16 @@
     }
     const url = safeUrl(bank.url);
     if (url) {
-      const link = element('a', 'voicebank-link', '获取音源 ↗');
+      const link = element('a', 'voicebank-link', bank.download ? '下载音源 ↓' : '获取音源 ↗');
       link.href = url;
-      link.target = '_blank';
-      link.rel = 'noopener noreferrer';
-      link.setAttribute('aria-label', `${bank.name}：前往配布页面（新窗口）`);
+      if (bank.download) {
+        link.download = bank.download;
+        link.setAttribute('aria-label', `${bank.name}：下载音源压缩包`);
+      } else {
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.setAttribute('aria-label', `${bank.name}：前往配布页面（新窗口）`);
+      }
       actions.append(link);
     } else if (bank.placeholder) {
       actions.append(pending('配布待添加'));
