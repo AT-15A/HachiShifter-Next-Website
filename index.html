@@ -21,6 +21,7 @@
       </a>
       <nav class="navigation" aria-label="主导航">
         <a href="#features">功能介绍</a>
+        <a href="#voicebanks">可使用音源</a>
         <a class="nav-download" href="#download">获取软件 <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
@@ -134,6 +135,13 @@
       </div>
     </section>
 
+    <section class="section container voicebanks-section" id="voicebanks" aria-labelledby="voicebanks-title">
+      <h2 id="voicebanks-title">可使用音源</h2>
+      <div class="voicebank-list" id="voicebank-list"></div>
+      <p class="voicebank-empty" id="voicebank-empty" hidden>音源列表整理中。</p>
+      <noscript><p class="voicebank-empty">请启用 JavaScript 查看音源列表。</p></noscript>
+    </section>
+
     <!-- 配布包托管于 GitHub Releases；更新时同步版本、大小及下载地址。 -->
     <section class="section container download-section" id="download" aria-labelledby="download-title">
       <div class="download-panel">
@@ -166,5 +174,7 @@
   </section>
 
   <footer class="site-footer"><div class="container footer-inner"><a class="brand footer-brand" href="#top"><img src="hachi-icon.png" alt="" width="32" height="32"><span>HachiShifter <span class="brand-next">Next</span></span></a><p>调音怎可冒迭行事？</p><a class="back-to-top" href="#top">回到顶部 <span aria-hidden="true">↑</span></a></div></footer>
+  <script src="voicebanks-data.js" defer></script>
+  <script src="voicebanks.js" defer></script>
 </body>
 </html>

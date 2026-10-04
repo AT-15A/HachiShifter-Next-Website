@@ -260,3 +260,36 @@ h3 { font-size: 23px; line-height: 1.5; font-weight: 600; letter-spacing: -.3px;
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; }
 }
+
+/* 可使用音源：数据位于 voicebanks-data.js。 */
+[hidden] { display: none !important; }
+.voicebanks-section { border-bottom: 1px solid #ffffff0b; padding-block: 64px; }
+.voicebanks-section h2 { margin-bottom: 28px; }
+.voicebank-list { border-top: 1px solid var(--border); }
+.voicebank-row { display: grid; grid-template-columns: 88px minmax(0, 1fr) auto; align-items: center; gap: 24px; padding-block: 22px; border-bottom: 1px solid var(--border); }
+.voicebank-row h3 { min-width: 0; font-size: 18px; font-weight: 500; overflow-wrap: anywhere; }
+.voicebank-actions { display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
+.voicebank-audio { width: 260px; max-width: 100%; height: 36px; }
+.voicebank-link, .voicebank-pending { display: inline-flex; align-items: center; justify-content: center; min-height: 40px; padding: 7px 14px; border: 1px solid #51435f; border-radius: 7px; background: transparent; color: var(--purple-light); font: inherit; font-size: 13px; white-space: nowrap; }
+.voicebank-link:hover { background: #29232f; }
+.voicebank-pending { color: var(--muted); border-color: var(--border); cursor: default; }
+.voicebank-empty { color: var(--muted); font-size: 14px; }
+@media (max-width: 700px) {
+  .navigation { gap: 16px; font-size: 13px; }
+  .voicebanks-section { padding-block: 42px; }
+  .voicebanks-section h2 { margin-bottom: 20px; }
+  .voicebank-row { grid-template-columns: 64px minmax(0, 1fr); gap: 10px 14px; padding-block: 18px; }
+  .voicebank-artwork { grid-row: span 2; align-self: start; }
+  .voicebank-actions { grid-column: 2; }
+  .voicebank-actions { flex-wrap: wrap; gap: 10px; max-width: 100%; }
+  .voicebank-audio { width: 230px; }
+}
+
+/* 保留紧凑封面，未提供图片时显示音符占位。 */
+.voicebank-artwork { position: relative; display: grid; place-items: center; width: 100%; aspect-ratio: 1; overflow: hidden; border: 1px solid #ffffff10; border-radius: 10px; background: radial-gradient(circle at 70% 15%, #a68ae944, transparent 75%), #292333; }
+.voicebank-cover-placeholder { color: var(--purple-light); font-family: Georgia, serif; font-size: 38px; line-height: 1; }
+.voicebank-row:nth-child(3n + 2) .voicebank-artwork { background: radial-gradient(circle at 70% 15%, #67d8d133, transparent 75%), #203031; }
+.voicebank-row:nth-child(3n + 2) .voicebank-cover-placeholder { color: #96d8d4; }
+.voicebank-row:nth-child(3n) .voicebank-artwork { background: radial-gradient(circle at 70% 15%, #ffb96f33, transparent 75%), #34292c; }
+.voicebank-row:nth-child(3n) .voicebank-cover-placeholder { color: #e4be99; }
+.voicebank-cover { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: var(--surface); }
